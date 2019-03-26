@@ -76,6 +76,7 @@ function addItemToCart(title, price, imgSrc) {
         `;
        cartRow.innerHTML = cartRowContents; 
     cartItems.append(cartRow);
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem);
 }
 
 
