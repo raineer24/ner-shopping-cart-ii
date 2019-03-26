@@ -22,7 +22,7 @@ function updateCartTotal() {
         const quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
         const price = parseFloat(priceElement.innerText.replace('$', ''));
         const quantity = quantityElement.value;
-        total = total + (price * quantity);
+        total += (price * quantity);
    };
-   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
+   document.getElementsByClassName('cart-total-price')[0].innerText = `$${total}`;
 }
