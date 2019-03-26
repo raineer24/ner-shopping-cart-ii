@@ -19,6 +19,7 @@ function updateCartTotal() {
         const cartRow = cartRows[i];
         const priceElement = cartRow.getElementsByClassName('cart-price')[0];
         const quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
-        console.log(priceElement, quantityElement);
+        const price = parseFloat(priceElement.innerText.replace('$', ''));
+        console.log(price);
    }
 }
