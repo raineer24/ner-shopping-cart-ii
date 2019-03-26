@@ -45,7 +45,9 @@ function addToCartClicked(event) {
     const button = event.target;
     const shopItem = button.parentElement.parentElement;
     const title = shopItem.getElementsByClassName('shop-item-title')[0].innerText;
-    console.log(title);
+    const price = shopItem.getElementsByClassName('shop-item-price')[0].innerText;
+    const imgSrc = shopItem.getElementsByClassName('shop-item-image')[0].src;
+    console.log(title, price, imgSrc);
 }
 
 
