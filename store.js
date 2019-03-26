@@ -20,6 +20,12 @@ function ready() {
         const input = quantityInputs[i];
         input.addEventListener('change', quantityChanged); 
     }
+
+    const addToCartButtons = document.getElementsByClassName('shop-item-button');
+    for (var i = 0; i < addToCartButtons.length; i++) {
+        const button = addToCartButtons[i];
+        button.addEventListener('click', addToCartClicked); 
+    }
 }
 
 function removeCartItem(event) {
