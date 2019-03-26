@@ -57,10 +57,10 @@ function addItemToCart(title, price, imgSrc) {
     const cartItems = document.getElementsByClassName('cart-items')[0];
     const cartRowContents = `
         <div class="cart-item cart-column">
-            <img class="cart-item-title" src="Images/Shirt.png" width="100" height="100">
-            <span class="cart-item-title">T-shirt</span>
+            <img class="cart-item-title" src="${imgSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
         </div>
-        <span class="cart-price cart-column">$9.99</span>
+        <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
             <input type="number" class="cart-quantity-input" value="2">
             <button class="btn btn-danger" type="button">REMOVE</button>
