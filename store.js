@@ -15,12 +15,14 @@ for (var i = 0; i < removeCartItemButtons.length; i++) {
 function updateCartTotal() {
     const cartItemContainer = document.getElementsByClassName('cart-items')[0];
     const cartRows = cartItemContainer.getElementsByClassName('cart-row');
+    let total = 0;
     for (var i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i];
         const priceElement = cartRow.getElementsByClassName('cart-price')[0];
         const quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
         const price = parseFloat(priceElement.innerText.replace('$', ''));
         const quantity = quantityElement.value;
-        console.log(price * quantity);
-   }
+        total = total + (price * quantity);
+   };
+   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
 }
