@@ -55,6 +55,9 @@ function addItemToCart(title, price, imgSrc) {
     const cartRow = document.createElement('div');
     cartRow.innerText = title;
     const cartItems = document.getElementsByClassName('cart-items')[0];
+    const cartRowContents = `
+           
+    `;
     cartItems.append(cartRow);
 }
 
