@@ -13,5 +13,9 @@ for (var i = 0; i < removeCartItemButtons.length; i++) {
 }
 
 function updateCartTotal() {
-    
+    const cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    const cartRows = cartItemContainer.getElementsByClassName('cart-row');
+    for (var i = 0; i < cartRows.length; i++) {
+
+    }
 }
