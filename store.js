@@ -53,6 +53,7 @@ function addToCartClicked(event) {
 
 function addItemToCart(title, price, imgSrc) {
     const cartRow = document.createElement('div');
+    cartRow.classList.add('cart-row');
     const cartItems = document.getElementsByClassName('cart-items')[0];
     const cartRowContents = `
         <div class="cart-item cart-column">
