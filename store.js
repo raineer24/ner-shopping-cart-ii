@@ -53,7 +53,6 @@ function addToCartClicked(event) {
 
 function addItemToCart(title, price, imgSrc) {
     const cartRow = document.createElement('div');
-    cartRow.innerText = title;
     const cartItems = document.getElementsByClassName('cart-items')[0];
     const cartRowContents = `
         <div class="cart-item cart-column">
@@ -66,6 +65,7 @@ function addItemToCart(title, price, imgSrc) {
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>  
         `;
+       cartRow.innerHTML = cartRowContents; 
     cartItems.append(cartRow);
 }
 
