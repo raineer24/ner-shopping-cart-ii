@@ -12,11 +12,25 @@ function ready() {
  
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         const button = removeCartItemButtons[i];
-        button.addEventListener('click', function(event) {
-        const buttonCLicked = event.target;
+        button.addEventListener('click', removeCartItem); 
+    }
+
+    const quantityInputs = document.getElementsByClassName('cart-quantity-input');
+    for (var i = 0; i < quantityInputs.length; i++) {
+        const input = rquantityInputs[i];
+        input.addEventListener('change', quantityChanged); 
+    }
+}
+
+function removeCartItem(event) {
+    const buttonCLicked = event.target;
         buttonCLicked.parentElement.parentElement.remove();
         updateCartTotal();
-        });
+}
+function quantityChanged(event) {
+    const input = event.target;
+    if (condition) {
+        
     }
 }
 
