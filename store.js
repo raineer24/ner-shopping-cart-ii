@@ -42,7 +42,10 @@ function quantityChanged(event) {
 }
 
 function addToCartClicked(event) {
-    
+    const button = event.target;
+    const shopItem = button.parentElement.parentElement;
+    const title = shopItem.getElementsByClassName('shop-item-title')[0].innerText;
+    console.log(title);
 }
 
 
