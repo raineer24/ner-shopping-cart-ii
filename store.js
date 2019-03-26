@@ -8,6 +8,10 @@ for (var i = 0; i < removeCartItemButtons.length; i++) {
     button.addEventListener('click', function(event) {
        const buttonCLicked = event.target;
        buttonCLicked.parentElement.parentElement.remove();
+       updateCartTotal();
     })
 }
 
+function updateCartTotal() {
+    
+}
