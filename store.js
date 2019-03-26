@@ -49,6 +49,7 @@ function addToCartClicked(event) {
     const imgSrc = shopItem.getElementsByClassName('shop-item-image')[0].src;
     console.log(title, price, imgSrc);
     addItemToCart(title, price, imgSrc);
+    updateCartTotal();
 }
 
 function addItemToCart(title, price, imgSrc) {
