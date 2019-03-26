@@ -41,6 +41,10 @@ function quantityChanged(event) {
     updateCartTotal();
 }
 
+function addToCartClicked(event) {
+    
+}
+
 
 
 function updateCartTotal() {
