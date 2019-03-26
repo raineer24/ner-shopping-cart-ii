@@ -17,7 +17,7 @@ function ready() {
 
     const quantityInputs = document.getElementsByClassName('cart-quantity-input');
     for (var i = 0; i < quantityInputs.length; i++) {
-        const input = rquantityInputs[i];
+        const input = quantityInputs[i];
         input.addEventListener('change', quantityChanged); 
     }
 }
@@ -29,9 +29,10 @@ function removeCartItem(event) {
 }
 function quantityChanged(event) {
     const input = event.target;
-    if (condition) {
-        
-    }
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+    };
+    updateCartTotal();
 }
 
 
