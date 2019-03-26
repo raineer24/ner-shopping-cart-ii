@@ -35,7 +35,8 @@ function purchaseClicked(){
     const cartItems = document.getElementsByClassName('cart-items')[0];
     while(cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild);
-    }
+    };
+    updateCartTotal();
 
 }
 
